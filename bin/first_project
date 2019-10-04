@@ -1,3 +1,5 @@
 #!/usr/bin/env ruby
 
-puts "Hello World"
+require './lib/first_project.rb'
+
+FirstProject::CLI.new.call
