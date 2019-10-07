@@ -1,0 +1,2 @@
+class FirstProject::News
+end
