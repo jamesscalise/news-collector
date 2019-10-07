@@ -5,5 +5,7 @@ class FirstProject::News
   end
   
   def self.scrape_headlines
+    news = []
+    doc = Nokogiri::HTML(open(https://www.statesman.com/))
   end
 end
