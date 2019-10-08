@@ -1,3 +1,6 @@
+require "pry"
+require "nokogiri"
+
 class FirstProject::News
  attr_accessor :headline, :url
   def self.now
@@ -10,6 +13,7 @@ class FirstProject::News
     doc.css(".stories .summary").each do |story|
       item = self.new
       item.headline = story.css("")
+      binding.pry
     end
     
     news
