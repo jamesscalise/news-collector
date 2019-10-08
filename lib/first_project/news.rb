@@ -10,10 +10,11 @@ class FirstProject::News
   
   def self.scrape_headlines
     news = []
-    doc = Nokogiri::HTML(open("www.statesman.com"))
+    doc = Nokogiri::HTML(open("https://www.statesman.com/"))
     doc.css(".stories .summary").each do |story|
       item = self.new
-      item.headline = story.css("")
+      item.headline = story.css("a").text
+      item.url = story.css("a").attr("href").value
       binding.pry
     end
     
