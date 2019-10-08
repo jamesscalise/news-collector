@@ -1,6 +1,6 @@
 class FirstProject::News
  attr_accessor :headline, :url
-  def self.today
+  def self.now
     self.scrape_headlines
   end
   
@@ -8,7 +8,10 @@ class FirstProject::News
     news = []
     doc = Nokogiri::HTML(open("https://www.statesman.com/"))
     doc.css(".stories .summary").each do |story|
-      
+      item = self.new
+      item.headline = story.css("")
     end
+    
+    news
   end
 end
