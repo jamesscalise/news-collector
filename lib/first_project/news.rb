@@ -23,8 +23,10 @@ class FirstProject::News
   
   def self.article_scrape(url)
     page = Nokogiri::HTML(open(url))
-    page.css(".article-body div.inner p").each do |paragraph|
-      binding.pry
+    article = []
+    article = page.css(".article-body div.inner p").map do |paragraph|
+      paragraph.text
     end
+    binding.pry
   end
 end
