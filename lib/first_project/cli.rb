@@ -22,8 +22,8 @@ class FirstProject::CLI
       input = gets.strip.downcase
       if input == "exit"
         break
-      elsif input.to_i > 0 && input.to_i < 6
-        text = FirstProject::News.article_scraper(@news[input.to_i].url)
+      elsif input.to_i > 0 && input.to_i < 7
+        text = FirstProject::News.article_scraper(@news[input.to_i-1].url)
         puts text
         
       elsif input == "update"
