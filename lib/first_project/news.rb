@@ -21,12 +21,14 @@ class FirstProject::News
     
   end
   
-  def self.article_scrape(url)
+  def self.article_scraper(url)
     page = Nokogiri::HTML(open(url))
     article = []
     article = page.css(".article-body div.inner p").map do |paragraph|
       paragraph.text
     end
-    binding.pry
+    noBlanksArticle = article.reject{|c| c.empty?}
+    articleString = noBlanksArticle.join("\n")
+    
   end
 end

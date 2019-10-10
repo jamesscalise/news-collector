@@ -23,7 +23,8 @@ class FirstProject::CLI
       if input == "exit"
         break
       elsif input.to_i > 0 && input.to_i < 6
-        text = FirstProject::News.article_scrape(@news[input.to_i].url)
+        text = FirstProject::News.article_scraper(@news[input.to_i].url)
+        puts text
         
       elsif input == "update"
         list_news
