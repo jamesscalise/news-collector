@@ -1,7 +1,7 @@
 PATH
   remote: .
   specs:
-    first_project (0.1.0)
+    news-collector-cli (0.1.0)
       nokogiri
 
 GEM
@@ -22,7 +22,7 @@ PLATFORMS
 
 DEPENDENCIES
   bundler (~> 2.0)
-  first_project!
+  news-collector-cli!
   pry
   rake (~> 10.0)
 

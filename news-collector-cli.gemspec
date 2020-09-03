@@ -1,11 +1,11 @@
 
 lib = File.expand_path("../lib", __FILE__)
 $LOAD_PATH.unshift(lib) unless $LOAD_PATH.include?(lib)
-require "first_project/version"
+require "news-collector-cli/version"
 
 Gem::Specification.new do |spec|
-  spec.name          = "first_project"
-  spec.version       = FirstProject::VERSION
+  spec.name          = "news-collector-cli"
+  spec.version       = NewsCollector::VERSION
   spec.authors       = ["'James Scalise'"]
   spec.email         = ["'jamescscalise@gmail.com'"]
 
