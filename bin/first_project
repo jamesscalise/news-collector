@@ -1,5 +1,5 @@
 #!/usr/bin/env ruby
 
-require './lib/first_project.rb'
+require './lib/news-collector-cli.rb'
 
-FirstProject::CLI.new.call
+NewsCollector::CLI.new.call

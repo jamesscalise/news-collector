@@ -1,5 +1,5 @@
 #CLI Controller
-class FirstProject::CLI
+class NewsCollector::CLI
   
   def call
     list_news
@@ -9,7 +9,7 @@ class FirstProject::CLI
   
   def list_news
     puts "Here are the top news stories right now:"
-    @news = FirstProject::News.now
+    @news = NewsCollector::News.now
     @news.each_with_index do |news, index|
       puts "#{index+1}. #{news.headline}"
     end
@@ -23,7 +23,7 @@ class FirstProject::CLI
       if input == "exit"
         break
       elsif input.to_i > 0 && input.to_i < 7
-        text = FirstProject::News.article_scraper(@news[input.to_i-1].url)
+        text = NewsCollector::News.article_scraper(@news[input.to_i-1].url)
         puts text
         
       elsif input == "update"

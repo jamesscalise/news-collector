@@ -2,7 +2,7 @@ require "pry"
 require "open-uri"
 require "nokogiri"
 
-class FirstProject::News
+class NewsCollector::News
  attr_accessor :headline, :url
   def self.now
     self.scrape_headlines
